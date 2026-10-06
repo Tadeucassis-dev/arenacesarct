@@ -104,7 +104,7 @@ export default function Header() {
               letterSpacing="1.5px"
               textTransform="uppercase"
             >
-              Futevôlei Social
+              Projeto Social
             </Text>
           </Flex>
         </Flex>
@@ -135,7 +135,10 @@ export default function Header() {
                   transformOrigin: 'left',
                   transition: 'transform 0.3s ease',
                 }}
-                _hoverAfter={{ transform: 'scaleX(1)' }}
+                _active={{
+                  color: 'goldLight',
+                  _after: { transform: 'scaleX(1)' }
+                }}
               >
                 {item.label}
               </Box>

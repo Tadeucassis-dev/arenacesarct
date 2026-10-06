@@ -16,31 +16,10 @@ export default function Hero() {
       display="flex"
       alignItems="center"
     >
-      <Box
-        position="absolute"
-        inset={0}
-        bgImage={`url('https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=beach%20volleyball%20court%20with%20golden%20sand%20at%20sunset%20professional%20aerial%20view%20dark%20moody%20lighting%20premium%20sport&image_size=landscape_16_9')`}
-        bgSize="cover"
-        bgPosition="center"
-        bgRepeat="no-repeat"
-      />
-      <Box
-        position="absolute"
-        inset={0}
-        bgGradient="linear(to-b, rgba(10,10,10,0.85) 0%, rgba(16,16,16,0.78) 45%, rgba(16,16,16,0.95) 100%)"
-      />
-      <Box
-        position="absolute"
-        inset={0}
-        bgGradient="radial-gradient(ellipse at top right, rgba(184,143,45,0.18) 0%, transparent 60%), radial-gradient(ellipse at bottom left, rgba(184,143,45,0.12) 0%, transparent 55%)"
-      />
+    
 
-      <Box position="absolute" left="-40px" top="20%" opacity="0.06" color="gold" pointerEvents="none">
-        <Volleyball size={300} strokeWidth={1} />
-      </Box>
-      <Box position="absolute" right="-20px" bottom="15%" opacity="0.06" color="gold" pointerEvents="none" display={{ base: 'none', md: 'block' }}>
-        <Volleyball size={220} strokeWidth={1} />
-      </Box>
+    
+   
 
       <Container maxW="7xl" position="relative" zIndex={1} px={{ base: 4, md: 6, lg: 10 }} py={{ base: 28, md: 24 }}>
         <Grid templateColumns={{ md: '1fr 1fr' }} gap={{ md: 16 }} alignItems="center">
@@ -54,7 +33,7 @@ export default function Hero() {
             >
               <MotionBox
                 display="inline-flex"
-                align="center"
+                alignItems="center"
                 gap={2}
                 px={{ base: 3, md: 4 }}
                 py={{ base: 1.5, md: 2 }}
@@ -176,80 +155,6 @@ export default function Hero() {
                 </HStack>
               </HStack>
             </MotionVStack>
-          </GridItem>
-
-          <GridItem display={{ base: 'none', md: 'block' }}>
-            <MotionBox
-              position="relative"
-              initial={{ opacity: 0, x: 40, scale: 0.95 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{ delay: 0.35, duration: 0.7, ease: 'easeOut' }}
-            >
-              <Box
-                position="absolute"
-                inset={-4}
-                borderRadius="3xl"
-                bgGradient="linear(135deg, rgba(184,143,45,0.25) 0%, transparent 60%)"
-                filter="blur(24px)"
-                zIndex={0}
-              />
-              <Box
-                position="relative"
-                borderRadius="3xl"
-                overflow="hidden"
-                border="2px solid rgba(184,143,45,0.35)"
-                boxShadow="0 30px 80px -20px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.05) inset"
-                zIndex={1}
-              >
-                <Image
-                  src={`https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=young%20teenagers%20playing%20beach%20soccer%20footvolley%20on%20golden%20sand%20court%20dramatic%20sunset%20professional%20sport%20photography&image_size=portrait_4_3`}
-                  alt="Crianças e adolescentes jogando futevôlei na areia"
-                  w="full"
-                  h="560px"
-                  objectFit="cover"
-                  fallback={
-                    <Box w="full" h="560px" bg="backgroundSecondary" display="flex" alignItems="center" justifyContent="center">
-                      <Volleyball size={80} color="#B88F2D" opacity={0.5} />
-                    </Box>
-                  }
-                />
-                <Box
-                  position="absolute"
-                  inset={0}
-                  bgGradient="linear(to-t, rgba(16,16,16,0.7) 0%, transparent 50%)"
-                />
-                <Box
-                  position="absolute"
-                  bottom={6}
-                  left={6}
-                  right={6}
-                  p={4}
-                  borderRadius="2xl"
-                  bg="rgba(16,16,16,0.6)"
-                  border="1px solid rgba(184,143,45,0.3)"
-                  backdropFilter="blur(8px)"
-                >
-                  <HStack justify="space-between">
-                    <VStack align="flex-start" spacing={0.5}>
-                      <Text fontSize="xs" color="goldLight" letterSpacing="1.5px" textTransform="uppercase">Local</Text>
-                      <Text fontSize="sm" fontWeight={600}>Arena César • Cidade Ocidental-GO</Text>
-                    </VStack>
-                    <Box
-                      w={12}
-                      h={12}
-                      borderRadius="xl"
-                      bg="rgba(184,143,45,0.15)"
-                      border="1px solid rgba(184,143,45,0.35)"
-                      display="flex"
-                      alignItems="center"
-                      justifyContent="center"
-                    >
-                      <Volleyball size={20} color="#D4AF55" />
-                    </Box>
-                  </HStack>
-                </Box>
-              </Box>
-            </MotionBox>
           </GridItem>
         </Grid>
       </Container>

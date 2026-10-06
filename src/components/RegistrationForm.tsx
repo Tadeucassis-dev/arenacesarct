@@ -33,7 +33,7 @@ import {
   Spinner,
   Center,
 } from '@chakra-ui/react'
-import { useForm, Controller, SubmitHandler, watch } from 'react-hook-form'
+import { useForm, Controller, SubmitHandler } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { motion } from 'framer-motion'
@@ -68,6 +68,7 @@ const schema = z
     serieAno: z.string().optional(),
     bairro: z.string().optional(),
     cidade: z.string().optional(),
+    
     nomeResponsavel: z.string().min(5, 'Informe o nome completo do responsável'),
     grauParentesco: z.string().min(3, 'Selecione o grau de parentesco'),
     whatsapp: z.string().min(14, 'Informe um WhatsApp válido'),
@@ -127,7 +128,7 @@ export default function RegistrationForm() {
     outroEsporte: '',
     observacoes: '',
     praticaFutevolei: 'nao',
-    termoResponsavel: false,
+    termoResponsavel: true,
   }
 
   const {

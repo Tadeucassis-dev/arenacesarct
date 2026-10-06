@@ -1,6 +1,8 @@
 export interface AlunoData {
   nomeCompleto: string
   dataNascimento: string
+  termoResponsavel: boolean
+  nomeResponsavel: string
   idade?: number
   escola: string
   serieAno: string
