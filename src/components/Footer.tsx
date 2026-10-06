@@ -51,7 +51,9 @@ export default function Footer() {
 
             <VStack align="flex-start" spacing={2} mt={4}>
               <Flex align="flex-start" gap={2.5}>
-                <MapPin size={16} color="#D4AF55" mt={0.5} flexShrink={0} />
+                <Box flexShrink={0} mt={0.5}>
+                  <MapPin size={16} color="#D4AF55" />
+                </Box>
                 <Text fontSize="sm" color="textSecondary" lineHeight={1.6}>
                   Cidade Ocidental – GO
                 </Text>

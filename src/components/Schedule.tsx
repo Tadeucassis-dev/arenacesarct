@@ -1,4 +1,4 @@
-import { Box, Container, VStack, Heading, Text, Button, Grid, GridItem, HStack } from '@chakra-ui/react'
+import { Box, Container, VStack, Heading, Text, Button, Grid, GridItem, HStack, useBreakpointValue } from '@chakra-ui/react'
 import { Clock, Bell, Sparkles } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useInView } from '@/hooks/useInView'
@@ -7,6 +7,7 @@ const MotionBox = motion(Box)
 
 export default function Schedule() {
   const [ref, inView] = useInView<HTMLDivElement>({ threshold: 0.15 })
+  const clockSize = useBreakpointValue({ base: 32, md: 40 }) ?? 32
 
   return (
     <Box as="section" id="horarios" py={{ base: 20, md: 28 }} position="relative" overflow="hidden">
@@ -68,7 +69,7 @@ export default function Schedule() {
                         alignItems="center"
                         justifyContent="center"
                       >
-                        <Clock size={{ base: 32, md: 40 }} color="#D4AF55" strokeWidth={1.8} />
+                        <Clock size={clockSize} color="#D4AF55" strokeWidth={1.8} />
                       </Box>
                     </Box>
 
@@ -177,7 +178,9 @@ export default function Schedule() {
                   spacing={2}
                   align="flex-start"
                 >
-                  <Sparkles size={16} color="#D4AF55" flexShrink={0} mt={0.5} />
+                  <Box flexShrink={0} mt={0.5}>
+                    <Sparkles size={16} color="#D4AF55" />
+                  </Box>
                   <Text lineHeight={1.6}>
                     Garanta seu lugar agora mesmo — as vagas serão limitadas e distribuídas conforme critérios do projeto.
                   </Text>

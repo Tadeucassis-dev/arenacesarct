@@ -281,7 +281,19 @@ export default function RegistrationForm() {
               colorScheme="none"
               alignItems="flex-start"
             >
-              <AlertIcon as={FileCheck} color="goldLight" boxSize={5} mt={0.5} mr={3} flexShrink={0} />
+              <Box
+                flexShrink={0}
+                mr={3}
+                mt={0.5}
+                w={5}
+                h={5}
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                color="goldLight"
+              >
+                <FileCheck size="100%" color="currentColor" className="chakra-alert__icon" />
+              </Box>
               <Box flex={1} textAlign="left">
                 <AlertTitle color="white" fontSize="sm" fontWeight={700} mb={0.5}>
                   Cadastro realizado pelo responsável legal

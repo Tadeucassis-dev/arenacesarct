@@ -1,4 +1,4 @@
-import { VStack, Heading, Text, Box, Button, HStack, Flex } from '@chakra-ui/react'
+import { VStack, Heading, Text, Box, Button, HStack, Flex, useBreakpointValue } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { CheckCircle2, MessageCircle, ArrowUp, Sparkles } from 'lucide-react'
 
@@ -9,6 +9,7 @@ interface SuccessMessageProps {
 }
 
 export default function SuccessMessage({ onVoltar }: SuccessMessageProps) {
+  const iconSize = useBreakpointValue({ base: 48, md: 62 }) ?? 48
   return (
     <MotionBox
       initial={{ opacity: 0, scale: 0.94, y: 20 }}
@@ -65,7 +66,7 @@ export default function SuccessMessage({ onVoltar }: SuccessMessageProps) {
               justifyContent="center"
             >
               <CheckCircle2
-                size={{ base: 48, md: 62 }}
+                size={iconSize}
                 color="#D4AF55"
                 strokeWidth={1.5}
               />

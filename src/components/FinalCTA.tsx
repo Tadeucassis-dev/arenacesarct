@@ -50,7 +50,7 @@ export default function FinalCTA() {
                   animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.5, delay: 0.15 }}
                   display="inline-flex"
-                  align="center"
+                  alignItems="center"
                   gap={2}
                   px={{ base: 3, md: 4 }}
                   py={{ base: 1.5, md: 2 }}

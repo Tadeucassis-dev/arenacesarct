@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface UseInViewOptions {
   threshold?: number
@@ -12,7 +12,7 @@ export function useInView<T extends HTMLElement>(
   const { threshold = 0.15, once = true, rootMargin = '0px 0px -60px 0px' } = options
   const ref = useRef<T>(null)
   const inViewRef = useRef(false)
-  const [, forceUpdate] = require('react').useState(false)
+  const [, setTick] = useState(0)
 
   useEffect(() => {
     const element = ref.current
@@ -20,7 +20,7 @@ export function useInView<T extends HTMLElement>(
 
     if (typeof IntersectionObserver === 'undefined') {
       inViewRef.current = true
-      forceUpdate((v: boolean) => !v)
+      setTick((v) => v + 1)
       return
     }
 
@@ -29,11 +29,11 @@ export function useInView<T extends HTMLElement>(
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             inViewRef.current = true
-            forceUpdate((v: boolean) => !v)
+            setTick((v) => v + 1)
             if (once) observer.disconnect()
           } else if (!once) {
             inViewRef.current = false
-            forceUpdate((v: boolean) => !v)
+            setTick((v) => v + 1)
           }
         })
       },

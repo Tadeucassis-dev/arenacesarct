@@ -168,14 +168,19 @@ export default function WhoCanParticipate() {
             alignItems="flex-start"
             colorScheme="none"
           >
-            <AlertIcon
-              as={AlertTriangle}
-              color="goldLight"
-              boxSize={6}
+            <Box
+              flexShrink={0}
               mr={4}
               mt={0.5}
-              flexShrink={0}
-            />
+              w={6}
+              h={6}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              color="goldLight"
+            >
+              <AlertTriangle size="100%" color="currentColor" className="chakra-alert__icon" />
+            </Box>
             <Box flex={1}>
               <AlertTitle
                 color="white"
