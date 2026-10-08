@@ -206,6 +206,36 @@ const components = {
           outline: 'none',
         },
       },
+      label: {
+        color: 'white',
+      },
+    },
+  },
+  FormLabel: {
+    baseStyle: {
+      color: 'white',
+      fontWeight: 500,
+    },
+  },
+  Radio: {
+    baseStyle: {
+      control: {
+        borderColor: 'whiteAlpha.300',
+        _checked: {
+          bg: 'gold',
+          borderColor: 'gold',
+        },
+        _hover: {
+          borderColor: 'gold',
+        },
+        _focusVisible: {
+          boxShadow: '0 0 0 3px rgba(212, 175, 85, 0.45)',
+          outline: 'none',
+        },
+      },
+      label: {
+        color: 'white',
+      },
     },
   },
 }

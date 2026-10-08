@@ -16,11 +16,6 @@ export default function Hero() {
       display="flex"
       alignItems="center"
     >
-    
-
-    
-   
-
       <Container maxW="7xl" position="relative" zIndex={1} px={{ base: 4, md: 6, lg: 10 }} py={{ base: 28, md: 24 }}>
         <Grid templateColumns={{ md: '1fr 1fr' }} gap={{ md: 16 }} alignItems="center">
           <GridItem>

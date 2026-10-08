@@ -382,7 +382,7 @@ export default function RegistrationForm() {
                     <Grid templateColumns={{ md: '1fr 1fr' }} gap={{ base: 4, md: 5 }}>
                       <GridItem colSpan={{ md: 2 }}>
                         <FormControl isRequired isInvalid={!!errors.nomeCompleto}>
-                          <FormLabel fontSize="sm" color="whiteAlpha.90" fontWeight={500} mb={1.5}>
+                          <FormLabel fontSize="sm" color="white" fontWeight={500} mb={1.5}>
                             Nome completo
                           </FormLabel>
                           <Input
@@ -398,7 +398,7 @@ export default function RegistrationForm() {
 
                       <GridItem>
                         <FormControl isRequired isInvalid={!!errors.dataNascimento}>
-                          <FormLabel fontSize="sm" color="whiteAlpha.90" fontWeight={500} mb={1.5}>
+                          <FormLabel fontSize="sm" color="white" fontWeight={500} mb={1.5}>
                             Data de nascimento
                           </FormLabel>
                           <Input
@@ -431,7 +431,7 @@ export default function RegistrationForm() {
 
                       <GridItem>
                         <FormControl isRequired isInvalid={!!errors.escola}>
-                          <FormLabel fontSize="sm" color="whiteAlpha.90" fontWeight={500} mb={1.5}>
+                          <FormLabel fontSize="sm" color="white" fontWeight={500} mb={1.5}>
                             Nome da escola
                           </FormLabel>
                           <Input
@@ -446,7 +446,7 @@ export default function RegistrationForm() {
 
                       <GridItem>
                         <FormControl isInvalid={!!errors.serieAno}>
-                          <FormLabel fontSize="sm" color="whiteAlpha.90" fontWeight={500} mb={1.5}>
+                          <FormLabel fontSize="sm" color="white" fontWeight={500} mb={1.5}>
                             Série/Ano escolar
                           </FormLabel>
                           <Select
@@ -471,7 +471,7 @@ export default function RegistrationForm() {
 
                       <GridItem>
                         <FormControl isInvalid={!!errors.bairro}>
-                          <FormLabel fontSize="sm" color="whiteAlpha.90" fontWeight={500} mb={1.5}>
+                          <FormLabel fontSize="sm" color="white" fontWeight={500} mb={1.5}>
                             Bairro
                           </FormLabel>
                           <Input
@@ -485,7 +485,7 @@ export default function RegistrationForm() {
 
                       <GridItem colSpan={{ md: 2 }}>
                         <FormControl isInvalid={!!errors.cidade}>
-                          <FormLabel fontSize="sm" color="whiteAlpha.90" fontWeight={500} mb={1.5}>
+                          <FormLabel fontSize="sm" color="white" fontWeight={500} mb={1.5}>
                             Cidade
                           </FormLabel>
                           <Input
@@ -523,7 +523,7 @@ export default function RegistrationForm() {
                     <Grid templateColumns={{ md: '1fr 1fr' }} gap={{ base: 4, md: 5 }}>
                       <GridItem colSpan={{ md: 2 }}>
                         <FormControl isRequired isInvalid={!!errors.nomeResponsavel}>
-                          <FormLabel fontSize="sm" color="whiteAlpha.90" fontWeight={500} mb={1.5}>
+                          <FormLabel fontSize="sm" color="white" fontWeight={500} mb={1.5}>
                             Nome completo do responsável
                           </FormLabel>
                           <Input
@@ -539,7 +539,7 @@ export default function RegistrationForm() {
 
                       <GridItem>
                         <FormControl isRequired isInvalid={!!errors.grauParentesco}>
-                          <FormLabel fontSize="sm" color="whiteAlpha.90" fontWeight={500} mb={1.5}>
+                          <FormLabel fontSize="sm" color="white" fontWeight={500} mb={1.5}>
                             Grau de parentesco
                           </FormLabel>
                           <Select
@@ -560,7 +560,7 @@ export default function RegistrationForm() {
 
                       <GridItem>
                         <FormControl isRequired isInvalid={!!errors.whatsapp}>
-                          <FormLabel fontSize="sm" color="whiteAlpha.90" fontWeight={500} mb={1.5}>
+                          <FormLabel fontSize="sm" color="white" fontWeight={500} mb={1.5}>
                             WhatsApp
                           </FormLabel>
                           <Input
@@ -576,7 +576,7 @@ export default function RegistrationForm() {
 
                       <GridItem colSpan={{ md: 2 }}>
                         <FormControl isInvalid={!!errors.email}>
-                          <FormLabel fontSize="sm" color="whiteAlpha.90" fontWeight={500} mb={1.5}>
+                          <FormLabel fontSize="sm" color="white" fontWeight={500} mb={1.5}>
                             E-mail <Box as="span" color="textSecondary" fontWeight={400}>(opcional)</Box>
                           </FormLabel>
                           <Input
@@ -616,7 +616,7 @@ export default function RegistrationForm() {
 
                     <VStack spacing={{ base: 4, md: 5 }} align="stretch">
                       <FormControl isInvalid={!!errors.praticaFutevolei}>
-                        <FormLabel fontSize="sm" color="whiteAlpha.90" fontWeight={500} mb={2}>
+                        <FormLabel fontSize="sm" color="white" fontWeight={500} mb={2}>
                           O aluno já pratica futevôlei?
                         </FormLabel>
                         <Controller
@@ -643,7 +643,7 @@ export default function RegistrationForm() {
                       </FormControl>
 
                       <FormControl isInvalid={!!errors.outroEsporte}>
-                        <FormLabel fontSize="sm" color="whiteAlpha.90" fontWeight={500} mb={1.5}>
+                        <FormLabel fontSize="sm" color="white" fontWeight={500} mb={1.5}>
                           Já praticou outro esporte?{' '}
                           <Box as="span" color="textSecondary" fontWeight={400}>(opcional)</Box>
                         </FormLabel>
@@ -656,7 +656,7 @@ export default function RegistrationForm() {
                       </FormControl>
 
                       <FormControl isInvalid={!!errors.observacoes}>
-                        <FormLabel fontSize="sm" color="whiteAlpha.90" fontWeight={500} mb={1.5}>
+                        <FormLabel fontSize="sm" color="white" fontWeight={500} mb={1.5}>
                           Observações{' '}
                           <Box as="span" color="textSecondary" fontWeight={400}>(opcional)</Box>
                         </FormLabel>
@@ -696,7 +696,7 @@ export default function RegistrationForm() {
                       >
                         <Text
                           fontSize={{ base: 'sm', md: 'md' }}
-                          color={errors.termoResponsavel ? 'red.300' : 'whiteAlpha.90'}
+                          color={errors.termoResponsavel ? 'red.300' : 'white'}
                           lineHeight={1.65}
                         >
                           Declaro que sou responsável legal pelo aluno informado e autorizo a Arena César a entrar em contato comigo para tratar da participação no Projeto Social de Futevôlei.
