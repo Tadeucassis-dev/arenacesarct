@@ -15,7 +15,7 @@ import {
   useBreakpointValue,
   Image,
 } from '@chakra-ui/react'
-import { Menu, Sparkles } from 'lucide-react'
+import { Menu, Sparkles, Shield } from 'lucide-react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 
@@ -154,6 +154,20 @@ export default function Header() {
             >
               Quero Participar
             </Button>
+            <Button
+              as="a"
+              href="#admin"
+              variant="ghost"
+              size="md"
+              px={3}
+              fontSize="sm"
+              color="textSecondary"
+              leftIcon={<Shield size={16} />}
+              _hover={{ color: 'goldLight', bg: 'whiteAlpha.50' }}
+              aria-label="Painel do Administrador"
+            >
+              Admin
+            </Button>
           </HStack>
         )}
 
@@ -207,6 +221,22 @@ export default function Header() {
                   Quero Participar
                 </Button>
               </Box>
+              <Button
+                as="a"
+                href="#admin"
+                onClick={onClose}
+                variant="ghost"
+                justifyContent="flex-start"
+                fontSize="md"
+                py={6}
+                px={4}
+                borderRadius="md"
+                color="textSecondary"
+                leftIcon={<Shield size={18} />}
+                _hover={{ bg: 'whiteAlpha.50', color: 'goldLight' }}
+              >
+                Painel Admin
+              </Button>
             </VStack>
           </DrawerBody>
         </DrawerContent>
