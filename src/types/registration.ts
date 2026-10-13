@@ -33,3 +33,12 @@ export interface RegistrationResponse {
   id?: string
   timestamp?: string
 }
+
+export type RegistrationStatus = 'pendente' | 'aprovado' | 'rejeitado'
+
+export interface RegistrationEntry extends RegistrationFormData {
+  id: string
+  timestamp: string
+  status: RegistrationStatus
+  statusUpdatedAt?: string
+}
